@@ -21,24 +21,18 @@ FUNCTIONALITY OVERVIEW:
          
 4.Error Handling : The program checks whether the correct number of command-line arguments is provided.If the task number for removal is invalid (e.g., does not exist), an error message is displayed.If there is                      an issue opening or creating the file, an error message is printed.
 
-*Limitations and Considerations*:
-File Size: The program is designed for small task lists and stores tasks in memory temporarily, which is not efficient for large lists.
+LIMITATIONS AND CONSIDERATIONS:
+1. File Size: The program is designed for small task lists and stores tasks in memory temporarily, which is not efficient for large lists.
+2. Task Numbering: Tasks are numbered starting from 1, and the numbering is reset after each removal.
+3. No Editing Feature: Currently, tasks can only be added or removed; editing is not supported.
+4. File Format: Tasks are stored as plain text without any structure such as timestamps or priorities.
 
-Task Numbering: Tasks are numbered starting from 1, and the numbering is reset after each removal.
+FUTURE ENHANCEMENTS:
+-> Add support for editing existing tasks.
+-> Implement task prioritization to mark tasks as high or low priority.
+-> Add the ability to mark tasks as completed.
+-> Preserve original task numbering even after deletions.
 
-No Editing Feature: Currently, tasks can only be added or removed; editing is not supported.
-
-File Format: Tasks are stored as plain text without any structure such as timestamps or priorities.
-
-*Future Enhancements*
-Add support for editing existing tasks.
-
-Implement task prioritization to mark tasks as high or low priority.
-
-Add the ability to mark tasks as completed.
-
-Preserve original task numbering even after deletions.
-
-*Conclusion*:
+CONCLUSION:
 This To-Do List Manager provides a basic yet functional interface for managing tasks via the command line. It demonstrates file handling, error checking, and command-line argument processing in C. This project serves as a solid foundation for learning how to build simple interactive tools using the C programming language.
 
