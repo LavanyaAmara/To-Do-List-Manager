@@ -13,7 +13,6 @@ FEATURES:
 FUNCTIONALITY OVERVIEW:
 1. Add a Task :The add command allows users to append a new task to the tasks.txt file. Each task is stored in the following format:    New task: <task_description>
                If the file does not exist, it is created automatically. If the file already exists, the new task is appended at the end.
-
 2.Remove a Task : The remove command allows users to delete a task based on its task number. Tasks are numbered in the order they are added, starting from 1. When a task is removed, the list is updated and                          renumbered. The updated list is saved back to the file.
 3.File Handling :
          For adding tasks: The program opens tasks.txt in append mode ("a"). If the file does not exist, it is created using write mode ("w").
@@ -28,6 +27,7 @@ LIMITATIONS AND CONSIDERATIONS:
 4. File Format: Tasks are stored as plain text without any structure such as timestamps or priorities.
 
 FUTURE ENHANCEMENTS:
+
 -> Add support for editing existing tasks.
 -> Implement task prioritization to mark tasks as high or low priority.
 -> Add the ability to mark tasks as completed.
