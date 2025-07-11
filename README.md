@@ -1,60 +1,44 @@
 # To-Do-List-Manager
 
-As part of my CS50 Course,I have implemented a basic TO-DO-LIST-MANAGER.
-This program allows users to manage a simple task list through the terminal. Tasks are stored in a file called tasks.txt, and the program supports two primary operations: adding and removing tasks.
+As part of my CS50 course, I have implemented a basic command-line To-Do List Manager using the C programming language.
 
-Adding Tasks: Users can add new tasks to a list stored in a text file.
-Removing Tasks: Users can remove a specific task from the list by specifying its task number.
-The program supports two main commands: add and remove.
+This project is a simple program that allows users to manage their tasks through a terminal interface. Tasks are stored in a text file named tasks.txt. The program supports two main operations: adding tasks and removing tasks by number.
 
-Add a Task:
-The add command allows the user to append new tasks to the tasks.txt file.
-When a user adds a task, the task will be saved in the file in the following format:  New task: <task_description>
-If the tasks.txt file does not exist when the program is run, it is created automatically.
-If the file exists, the task is simply appended to the end of the file.
+FEATURES:
+1. Add new tasks to the list
+2. Remove existing tasks using their task number
+3. Store tasks persistently in a text file
+4. Includes file handling and error handling
 
-Remove a Task:
-The remove command allows the user to delete a task based on its task number.
-The tasks are numbered in the order they are added (starting from 1). If the user enters the number of a task to remove, it is deleted, and the remaining tasks are renumbered.
-After a task is removed, the list is updated, and all remaining tasks are written back to the file.
+FUNCTIONALITY OVERVIEW:
+1. Add a Task :The add command allows users to append a new task to the tasks.txt file. Each task is stored in the following format:    New task: <task_description>
+               If the file does not exist, it is created automatically. If the file already exists, the new task is appended at the end.
 
+2.Remove a Task : The remove command allows users to delete a task based on its task number. Tasks are numbered in the order they are added, starting from 1. When a task is removed, the list is updated and                          renumbered. The updated list is saved back to the file.
+3.File Handling :
+         For adding tasks: The program opens tasks.txt in append mode ("a"). If the file does not exist, it is created using write mode ("w").
+         For removing tasks: The program reads all tasks into memory, skips the specified task, and rewrites the file with the remaining tasks.
+         
+4.Error Handling : The program checks whether the correct number of command-line arguments is provided.If the task number for removal is invalid (e.g., does not exist), an error message is displayed.If there is                      an issue opening or creating the file, an error message is printed.
 
-I have included file handling and error handling also:
+*Limitations and Considerations*:
+File Size: The program is designed for small task lists and stores tasks in memory temporarily, which is not efficient for large lists.
 
-File Handling:
+Task Numbering: Tasks are numbered starting from 1, and the numbering is reset after each removal.
 
-Add Command: The program opens tasks.txt in append mode ("a") to add a new task. If the file does not exist, it is created automatically using "w" mode.
-Remove Command: The program reads all tasks from tasks.txt into an array, skips the task to be removed, and rewrites the file with the updated list.
+No Editing Feature: Currently, tasks can only be added or removed; editing is not supported.
 
+File Format: Tasks are stored as plain text without any structure such as timestamps or priorities.
 
-Error Handling:
+*Future Enhancements*
+Add support for editing existing tasks.
 
-The program checks whether the correct number of arguments are provided.
-If the remove command is given an invalid task number (such as a number that does not exist), it will print an error message.
-If there are issues opening or creating the tasks.txt file, an error message is printed.
+Implement task prioritization to mark tasks as high or low priority.
 
-Limitations and Considerations::
+Add the ability to mark tasks as completed.
 
-File Size:
-The program is designed for simple tasks and works well with small lists. It stores all tasks in memory temporarily, which is not efficient for large numbers of tasks.
+Preserve original task numbering even after deletions.
 
-Task Numbering:
-The program uses a 1-based index for tasks. After removing a task, the remaining tasks are renumbered automatically when rewriting the file.
+*Conclusion*:
+This To-Do List Manager provides a basic yet functional interface for managing tasks via the command line. It demonstrates file handling, error checking, and command-line argument processing in C. This project serves as a solid foundation for learning how to build simple interactive tools using the C programming language.
 
-No Editing:
- Currently, the program does not support editing tasks. A task can only be added or removed.
-
-File Structure:
- The tasks are stored in the file with a simple format: New task: <task_description>. There is no advanced structure (e.g., timestamps or priorities).
-
-
-Future Enhancements::
-
-Editing Tasks: Implement a command to edit existing tasks.
-Task Prioritization: Allow users to mark tasks as high or low priority.
-Task Completion: Add a way to mark tasks as completed (e.g., a check mark or a "completed" status).
-Persistent Task Index: Preserve the original task order and numbering without reassigning indices after a removal.
-
-
-Conclusion::
-This simple to-do list manager provides a basic functionality for managing tasks via the command line. It allows users to add tasks, remove tasks by number, and persist the tasks to a text file. It’s a good starting point for learning how to interact with files and process user input in C.
