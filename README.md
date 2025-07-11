@@ -1,8 +1,7 @@
 # To-Do-List-Manager
 
-As a part of my CS50 Course,I have implemented a basic TO-DO-LIST-MANAGER.
-My project is a command-line program using c.I have a created a todo space where we can add and remove our to do activities.
-This program is a simple command-line-based to-do list manager written in C. It allows users to add and remove tasks from a text file (tasks.txt). The program provides two main features:
+As part of my CS50 Course,I have implemented a basic TO-DO-LIST-MANAGER.
+This program allows users to manage a simple task list through the terminal. Tasks are stored in a file called tasks.txt, and the program supports two primary operations: adding and removing tasks.
 
 Adding Tasks: Users can add new tasks to a list stored in a text file.
 Removing Tasks: Users can remove a specific task from the list by specifying its task number.
