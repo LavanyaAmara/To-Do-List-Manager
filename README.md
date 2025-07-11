@@ -7,7 +7,7 @@ Adding Tasks: Users can add new tasks to a list stored in a text file.
 Removing Tasks: Users can remove a specific task from the list by specifying its task number.
 The program supports two main commands: add and remove.
 
-1. Add a Task:
+Add a Task:
 The add command allows the user to append new tasks to the tasks.txt file.
 When a user adds a task, the task will be saved in the file in the following format:  New task: <task_description>
 If the tasks.txt file does not exist when the program is run, it is created automatically.
