@@ -13,7 +13,9 @@ FEATURES:
 FUNCTIONALITY OVERVIEW:
 1. Add a Task :The add command allows users to append a new task to the tasks.txt file. Each task is stored in the following format:    New task: <task_description>
                If the file does not exist, it is created automatically. If the file already exists, the new task is appended at the end.
+   
 2.Remove a Task : The remove command allows users to delete a task based on its task number. Tasks are numbered in the order they are added, starting from 1. When a task is removed, the list is updated and                          renumbered. The updated list is saved back to the file.
+
 3.File Handling : For adding tasks: The program opens tasks.txt in append mode ("a"). If the file does not exist, it is created using write mode ("w").
                   For removing tasks: The program reads all tasks into memory, skips the specified task, and rewrites the file with the remaining tasks.
          
@@ -33,5 +35,6 @@ FUTURE ENHANCEMENTS:
 4. Preserve original task numbering even after deletions.
 
 CONCLUSION:
+
 This To-Do List Manager provides a basic yet functional interface for managing tasks via the command line. It demonstrates file handling, error checking, and command-line argument processing in C. This project serves as a solid foundation for learning how to build simple interactive tools using the C programming language.
 
